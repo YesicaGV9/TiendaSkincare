@@ -1,0 +1,29 @@
+.category-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.cat-btn {
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: capitalize;
+  color: var(--bark);
+  background: white;
+  transition: var(--transition);
+}
+
+.cat-btn:hover {
+  border-color: var(--rose);
+  color: var(--rose);
+}
+
+.cat-btn.active {
+  background: var(--bark);
+  border-color: var(--bark);
+  color: white;
+}

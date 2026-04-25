@@ -1,0 +1,215 @@
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 88vh;
+  overflow: hidden;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem 4rem 5rem 6rem;
+  background: var(--cream);
+}
+
+.hero__tag {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.hero__title {
+  font-size: clamp(3rem, 5vw, 5rem);
+  color: var(--bark);
+  margin-bottom: 1.5rem;
+  line-height: 1.05;
+}
+
+.hero__title em {
+  font-style: italic;
+  color: var(--rose);
+}
+
+.hero__subtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 380px;
+  line-height: 1.75;
+  margin-bottom: 2.5rem;
+}
+
+.hero__actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.btn-primary {
+  background: var(--bark);
+  color: var(--cream);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.85rem 2rem;
+  border-radius: 50px;
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.btn-primary:hover { background: var(--deep-rose); }
+.btn-primary.light { background: white; color: var(--bark); }
+.btn-primary.light:hover { background: var(--cream); }
+
+.btn-ghost {
+  font-size: 0.85rem;
+  color: var(--bark);
+  transition: color 0.2s;
+}
+
+.btn-ghost:hover { color: var(--rose); }
+
+.hero__visual {
+  position: relative;
+  background: var(--blush);
+}
+
+.hero__image-wrap {
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero__image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+  opacity: 0.85;
+}
+
+.hero__badge {
+  position: absolute;
+  bottom: 3rem;
+  left: -2rem;
+  background: white;
+  padding: 1.2rem 1.5rem;
+  box-shadow: var(--shadow-hover);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  border-radius: 4px;
+}
+
+.badge-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--rose);
+  line-height: 1;
+}
+
+.badge-text {
+  font-size: 0.75rem;
+  color: var(--bark);
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* Features */
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin-top: 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.feature-item {
+  padding: 2.5rem 2rem;
+  text-align: center;
+  border-right: 1px solid var(--border);
+  transition: background 0.2s;
+}
+
+.feature-item:last-child { border-right: none; }
+.feature-item:hover { background: var(--cream); }
+
+.feature-icon { font-size: 1.8rem; display: block; margin-bottom: 0.8rem; }
+
+.feature-item h3 {
+  font-size: 0.95rem;
+  color: var(--bark);
+  margin-bottom: 0.4rem;
+}
+
+.feature-item p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Gallery Section */
+.home-gallery { margin-top: 5rem; }
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.section-header h2 {
+  font-size: 2.2rem;
+  color: var(--bark);
+}
+
+.see-all {
+  font-size: 0.82rem;
+  color: var(--rose);
+  transition: color 0.2s;
+}
+
+.see-all:hover { color: var(--deep-rose); }
+
+/* CTA Banner */
+.cta-banner {
+  background: var(--bark);
+  padding: 6rem 0;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.cta-banner__inner h2 {
+  font-size: 3rem;
+  color: var(--cream);
+  margin-bottom: 1rem;
+}
+
+.cta-banner__inner h2 em {
+  font-style: italic;
+  color: var(--blush);
+}
+
+.cta-banner__inner p {
+  color: rgba(249,244,238,0.65);
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero__content { padding: 4rem 2rem; }
+  .hero__visual { height: 50vw; }
+  .features { grid-template-columns: repeat(2, 1fr); }
+  .feature-item:nth-child(2) { border-right: none; }
+}
+
+@media (max-width: 480px) {
+  .features { grid-template-columns: 1fr; }
+  .feature-item { border-right: none; border-bottom: 1px solid var(--border); }
+}
