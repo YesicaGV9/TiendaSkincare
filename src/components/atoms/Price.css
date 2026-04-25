@@ -1,0 +1,14 @@
+/* Price Styles */
+.price {
+  font-weight: 700;
+  color: #d4a5c7;
+  font-size: 18px;
+}
+
+.price-sm {
+  font-size: 14px;
+}
+
+.price-lg {
+  font-size: 24px;
+}
