@@ -9,8 +9,7 @@ export default function Footer() {
         <div className="footer-section">
           <h4>About Us</h4>
           <p>
-            Welcome to Skincare Shop - Your trusted source for premium Korean
-            skincare products and beauty solutions.
+            Bienvenido a Importaciones Korean - Tu tienda de confianza para moda coreana de primera calidad, accesorios y ropa exclusiva importada directamente desde Korea.
           </p>
         </div>
 
@@ -21,17 +20,17 @@ export default function Footer() {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/cart">Cart</a>
+              <a href="/cart">Carrito</a>
             </li>
             <li>
-              <a href="/login">Account</a>
+              <a href="/login">Cuenta</a>
             </li>
           </ul>
         </div>
 
         <div className="footer-section">
           <h4>Contact</h4>
-          <p>Email: info@skincareshop.com</p>
+          <p>Email: info@importacioneskorean.com</p>
           <p>Phone: +57 (123) 456-7890</p>
         </div>
 

@@ -34,15 +34,15 @@ export default function Home() {
 
   const handleAddToCart = (product) => {
     addItem(product, 1);
-    alert(`${product.title.substring(0, 30)}... added to cart!`);
+    alert(`${product.title.substring(0, 30)}... ¡agregado al carrito!`);
   };
 
   return (
     <MainLayout onSearch={handleSearch}>
       <div className="home-container">
         <section className="hero-section">
-          <h1>Welcome to Skincare Shop 🌸</h1>
-          <p>Discover premium Korean skincare products for your beauty routine</p>
+          <h1>Bienvenido a Importaciones Korean 👗</h1>
+          <p>Descubre la moda coreana más trendy y actualizada. Ropa premium de alta calidad directa desde Korea.</p>
         </section>
 
         <div className="home-layout">
@@ -57,7 +57,7 @@ export default function Home() {
           <main className="main-section">
             {filteredProducts.length === 0 && searchQuery && (
               <div className="no-results">
-                <p>No products found for "{searchQuery}"</p>
+                <p>No hay productos encontrados para "{searchQuery}"</p>
                 <Button
                   variant="primary"
                   onClick={() => {
@@ -65,7 +65,7 @@ export default function Home() {
                     searchProducts('');
                   }}
                 >
-                  Clear Search
+                  Limpiar Búsqueda
                 </Button>
               </div>
             )}
@@ -84,11 +84,11 @@ export default function Home() {
                       onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
                       disabled={currentPage === 1}
                     >
-                      Previous
+                      Anterior
                     </Button>
 
                     <div className="page-info">
-                      Page {currentPage} of {totalPages}
+                      Página {currentPage} de {totalPages}
                     </div>
 
                     <Button
@@ -98,7 +98,7 @@ export default function Home() {
                       }
                       disabled={currentPage === totalPages}
                     >
-                      Next
+                      Siguiente
                     </Button>
                   </div>
                 )}

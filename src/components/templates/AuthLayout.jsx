@@ -9,7 +9,7 @@ export default function AuthLayout({ children, title, linkText, linkHref }) {
         <div className="auth-card fade-in">
           <div className="auth-header">
             <Link to="/" className="auth-logo">
-              🌸 Skincare Shop
+              👗 Importaciones Korean
             </Link>
             <h1>{title}</h1>
           </div>

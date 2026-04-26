@@ -24,7 +24,7 @@ export default function Header({ onSearch }) {
     <header className="header">
       <div className="header-container container flex-between">
         <Link to="/" className="logo">
-          🌸 Skincare Shop
+          👗 Importaciones Korean
         </Link>
 
         <button

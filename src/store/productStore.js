@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { koreanClothingProducts } from '../mockdata/koreanClothing';
 
 export const useProductStore = create((set, get) => ({
   products: [],
@@ -7,23 +8,17 @@ export const useProductStore = create((set, get) => ({
   selectedCategory: 'all',
   currentPage: 1,
   productsPerPage: 6,
-  categories: ['Cleansers', 'Toners', 'Essences', 'Serums', 'Masks', 'Moisturizers'],
+  categories: ['Sudaderas', 'Pantalones', 'Camisetas', 'Blusas', 'Faldas', 'Suéteres', 'Shorts', 'Pijamas', 'Accesorios', 'Chaquetas', 'Vestidos', 'Abrigos', 'Tops'],
   loading: false,
   error: null,
 
-  // Fetch products from FakeStore API
+  // Load mock products
   fetchProducts: async () => {
     set({ loading: true, error: null });
     try {
-      const response = await fetch('https://fakestoreapi.com/products?limit=20');
-      const data = await response.json();
-      // Transform products as skincare items
-      const transformedProducts = data.map((product) => ({
-        ...product,
-        category: product.category === 'electronics' ? 'Serums' : 'Moisturizers',
-        skintype: ['All Types', 'Oily', 'Dry', 'Combination'][Math.floor(Math.random() * 4)],
-      }));
-      set({ products: transformedProducts, filteredProducts: transformedProducts, loading: false });
+      // Simular un pequeño delay como si fuera una API
+      await new Promise((resolve) => setTimeout(resolve, 500));
+      set({ products: koreanClothingProducts, filteredProducts: koreanClothingProducts, loading: false });
     } catch (err) {
       set({ error: err.message, loading: false });
     }

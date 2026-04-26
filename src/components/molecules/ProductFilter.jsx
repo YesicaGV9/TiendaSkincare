@@ -5,14 +5,14 @@ import './ProductFilter.css';
 export default function ProductFilter({ categories, selectedCategory, onCategoryChange }) {
   return (
     <div className="product-filter">
-      <h3 className="filter-title">Categories</h3>
+      <h3 className="filter-title">Categorías</h3>
       <div className="filter-buttons">
         <Button
           variant={selectedCategory === 'all' ? 'primary' : 'secondary'}
           size="sm"
           onClick={() => onCategoryChange('all')}
         >
-          All
+          Todos
         </Button>
         {categories.map((category) => (
           <Button

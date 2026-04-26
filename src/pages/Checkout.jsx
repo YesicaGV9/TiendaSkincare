@@ -29,9 +29,9 @@ export default function Checkout() {
     return (
       <MainLayout>
         <div className="checkout-redirect">
-          <p>You must be logged in to proceed with checkout</p>
+          <p>Debes estar registrado para proceder al pago</p>
           <Button variant="primary" onClick={() => navigate('/login')}>
-            Go to Login
+            Ir a Login
           </Button>
         </div>
       </MainLayout>
@@ -42,9 +42,9 @@ export default function Checkout() {
     return (
       <MainLayout>
         <div className="checkout-redirect">
-          <p>Your cart is empty</p>
+          <p>Tu carrito está vacío</p>
           <Button variant="primary" onClick={() => navigate('/')}>
-            Continue Shopping
+            Continuar Comprando
           </Button>
         </div>
       </MainLayout>
@@ -106,19 +106,19 @@ export default function Checkout() {
           onClick={() => navigate('/cart')}
           className="back-btn"
         >
-          <FiArrowLeft /> Back to Cart
+          <FiArrowLeft /> Volver al Carrito
         </Button>
 
-        <h1>Checkout</h1>
+        <h1>Pago</h1>
 
         <div className="checkout-layout">
           <div className="checkout-form">
             <form onSubmit={handlePlaceOrder}>
               <section className="checkout-section">
-                <h2>Shipping Information</h2>
+                <h2>Información de Envío</h2>
                 <div className="form-row">
-                  <div className="form-group">
-                    <label>Full Name</label>
+                <div className="form-group">
+                    <label>Nombre Completo</label>
                     <Input
                       name="fullName"
                       value={formData.fullName}
@@ -138,7 +138,7 @@ export default function Checkout() {
                   </div>
                 </div>
                 <div className="form-group">
-                  <label>Phone</label>
+                  <label>Teléfono</label>
                   <Input
                     name="phone"
                     value={formData.phone}
@@ -147,7 +147,7 @@ export default function Checkout() {
                   />
                 </div>
                 <div className="form-group">
-                  <label>Address</label>
+                  <label>Dirección</label>
                   <Input
                     name="address"
                     value={formData.address}
@@ -157,7 +157,7 @@ export default function Checkout() {
                 </div>
                 <div className="form-row">
                   <div className="form-group">
-                    <label>City</label>
+                    <label>Ciudad</label>
                     <Input
                       name="city"
                       value={formData.city}
@@ -166,7 +166,7 @@ export default function Checkout() {
                     />
                   </div>
                   <div className="form-group">
-                    <label>Zip Code</label>
+                    <label>Código Postal</label>
                     <Input
                       name="zipCode"
                       value={formData.zipCode}
@@ -178,7 +178,7 @@ export default function Checkout() {
               </section>
 
               <section className="checkout-section">
-                <h2>Payment Method</h2>
+                <h2>Método de Pago</h2>
                 <div className="payment-options">
                   {['credit-card', 'debit-card', 'paypal'].map((method) => (
                     <label key={method} className="payment-option">
@@ -191,9 +191,9 @@ export default function Checkout() {
                       />
                       <span>
                         {method === 'credit-card'
-                          ? '💳 Credit Card'
+                          ? '💳 Tarjeta de Crédito'
                           : method === 'debit-card'
-                          ? '💳 Debit Card'
+                          ? '💳 Tarjeta Débito'
                           : '🅿️ PayPal'}
                       </span>
                     </label>
@@ -207,14 +207,14 @@ export default function Checkout() {
                 size="lg"
                 fullWidth
               >
-                Place Order
+                Realizar Compra
               </Button>
             </form>
           </div>
 
           <div className="checkout-summary">
             <div className="summary-card">
-              <h2>Order Summary</h2>
+              <h2>Resumen de Orden</h2>
 
               <div className="order-items">
                 {items.map((item) => (
@@ -222,7 +222,7 @@ export default function Checkout() {
                     <img src={item.image} alt={item.title} />
                     <div>
                       <p className="item-name">{item.title.substring(0, 30)}</p>
-                      <p className="item-qty">Qty: {item.quantity}</p>
+                      <p className="item-qty">Cantidad: {item.quantity}</p>
                     </div>
                     <Price amount={item.price * item.quantity} />
                   </div>
@@ -237,11 +237,11 @@ export default function Checkout() {
                   <Price amount={total} />
                 </div>
                 <div className="summary-line">
-                  <span>Shipping:</span>
+                  <span>Envío:</span>
                   <Price amount={shippingCost} />
                 </div>
                 <div className="summary-line">
-                  <span>Tax (8%):</span>
+                  <span>Impuestos (8%):</span>
                   <Price amount={tax} />
                 </div>
                 <div className="summary-line total">

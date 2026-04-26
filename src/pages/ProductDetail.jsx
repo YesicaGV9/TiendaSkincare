@@ -22,9 +22,9 @@ export default function ProductDetail() {
     return (
       <MainLayout>
         <div className="product-not-found">
-          <p>Product not found</p>
+          <p>Producto no encontrado</p>
           <Button variant="primary" onClick={() => navigate('/')}>
-            Back to Home
+            Volver a Inicio
           </Button>
         </div>
       </MainLayout>
@@ -33,7 +33,7 @@ export default function ProductDetail() {
 
   const handleAddToCart = () => {
     addItem(product, quantity);
-    alert(`${quantity} item(s) added to cart!`);
+    alert(`¡${quantity} artículo(s) agregado(s) al carrito!`);
     navigate('/cart');
   };
 
@@ -46,7 +46,7 @@ export default function ProductDetail() {
           onClick={() => navigate('/')}
           className="back-btn"
         >
-          <FiArrowLeft /> Back
+          <FiArrowLeft /> Volver
         </Button>
 
         <div className="product-detail-container">
@@ -64,7 +64,7 @@ export default function ProductDetail() {
 
             <div className="product-detail-rating">
               <span>⭐ {product.rating?.rate || 4.5}</span>
-              <span>{product.rating?.count || 100} reviews</span>
+              <span>{product.rating?.count || 100} reseñas</span>
             </div>
 
             <div className="product-detail-price">
@@ -73,7 +73,7 @@ export default function ProductDetail() {
 
             <div className="product-detail-actions">
               <div className="quantity-selector">
-                <label>Quantity:</label>
+                <label>Cantidad:</label>
                 <input
                   type="number"
                   min="1"
@@ -89,7 +89,7 @@ export default function ProductDetail() {
                 fullWidth
                 onClick={handleAddToCart}
               >
-                <FiShoppingCart /> Add to Cart
+                <FiShoppingCart /> Agregar al Carrito
               </Button>
 
               <Button
@@ -98,17 +98,17 @@ export default function ProductDetail() {
                 fullWidth
                 onClick={() => navigate('/')}
               >
-                Continue Shopping
+                Seguir Comprando
               </Button>
             </div>
 
             <div className="product-detail-features">
-              <h3>Features</h3>
+              <h3>Características</h3>
               <ul>
-                <li>Premium quality product</li>
-                <li>Fast and free shipping</li>
-                <li>30-day money-back guarantee</li>
-                <li>Eco-friendly packaging</li>
+                <li>Ropa de calidad premium</li>
+                <li>Envío rápido y gratuito</li>
+                <li>Garantía de 30 días</li>
+                <li>Empaque ecológico</li>
               </ul>
             </div>
           </div>

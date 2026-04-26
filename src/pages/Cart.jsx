@@ -23,7 +23,7 @@ export default function Cart() {
 
   const handleCheckout = () => {
     if (!isAuthenticated) {
-      alert('Please login first');
+      alert('Por favor inicia sesión primero');
       navigate('/login');
       return;
     }
@@ -40,16 +40,16 @@ export default function Cart() {
             onClick={() => navigate('/')}
             className="back-btn"
           >
-            <FiArrowLeft /> Continue Shopping
+            <FiArrowLeft /> Continuar Comprando
           </Button>
-          <h1>Shopping Cart</h1>
+          <h1>Carrito de Compras</h1>
         </div>
 
         {items.length === 0 ? (
           <div className="empty-cart">
-            <p>Your cart is empty</p>
+            <p>Tu carrito está vacío</p>
             <Link to="/" className="btn btn-primary">
-              Start Shopping
+              Continuar Comprando
             </Link>
           </div>
         ) : (
@@ -58,11 +58,11 @@ export default function Cart() {
               <table className="cart-table">
                 <thead>
                   <tr>
-                    <th>Product</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
                     <th>Subtotal</th>
-                    <th>Action</th>
+                    <th>Acción</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -107,17 +107,17 @@ export default function Cart() {
 
             <div className="cart-summary">
               <div className="summary-card">
-                <h2>Order Summary</h2>
+                <h2>Resumen de Orden</h2>
                 <div className="summary-line">
                   <span>Subtotal:</span>
                   <Price amount={total} />
                 </div>
                 <div className="summary-line">
-                  <span>Shipping:</span>
+                  <span>Envío:</span>
                   <Price amount={0} />
                 </div>
                 <div className="summary-line">
-                  <span>Tax:</span>
+                  <span>Impuestos:</span>
                   <Price amount={total * 0.08} />
                 </div>
                 <hr />
@@ -131,7 +131,7 @@ export default function Cart() {
                   fullWidth
                   onClick={handleCheckout}
                 >
-                  Proceed to Checkout
+                  Proceder al Pago
                 </Button>
               </div>
             </div>

@@ -8,10 +8,12 @@
 }
 
 .header-container {
-  padding: 15px 0;
+  padding: 15px var(--spacing-md);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .logo {

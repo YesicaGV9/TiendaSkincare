@@ -3,7 +3,7 @@ import { FiSearch } from 'react-icons/fi';
 import Input from '../atoms/Input';
 import './SearchBar.css';
 
-export default function SearchBar({ value, onChange, placeholder = 'Search skincare...' }) {
+export default function SearchBar({ value, onChange, placeholder = 'Buscar ropa coreana...' }) {
   return (
     <div className="search-bar">
       <FiSearch className="search-icon" />
