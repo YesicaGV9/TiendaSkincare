@@ -20,7 +20,7 @@ function App() {
   }, []);
 
   return (
-    <Router basename="/importaciones-korean">
+    <Router basename="/TiendaKorean">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product/:id" element={<ProductDetail />} />
